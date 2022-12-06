@@ -37,8 +37,6 @@ const inCart = computed(() => {
 const cart = useCart();
 
 function addToCart() {
-    console.log(inCart.value);
-    
     if (!inCart.value) {
         cart.value.push({
             name: fullName,

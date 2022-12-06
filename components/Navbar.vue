@@ -3,6 +3,7 @@
         <NuxtLink to="/">Index Page</NuxtLink>
         <NuxtLink to="/about">About Page</NuxtLink>
         <NuxtLink to="/iphone">Iphone Page</NuxtLink>
+        <NuxtLink to="/login">Login</NuxtLink>
         <NuxtLink to="/profile">Profile Page</NuxtLink>
         <p>Cart ({{cart.length}})</p>
     </nav>
