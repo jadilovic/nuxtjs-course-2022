@@ -4,11 +4,12 @@
             <NuxtLink class="mr-4" to="/">Index Page</NuxtLink>
             <NuxtLink class="mr-4" to="/about">About Page</NuxtLink>
             <NuxtLink class="mr-4" to="/iphone">Iphone Page</NuxtLink>
-            <p>Cart ({{cart.length}})</p>
-            <p>Total routes changed: ({{visitedPages}})</p>
+            <p class="mr-4">Cart ({{cart.length}})</p>
+            <p>Routes: ({{visitedPages}})</p>
         </div>
         <div v-if="auth.isAuthorized" >
-            <NuxtLink to="/profile">Profile Page</NuxtLink>
+            <NuxtLink class="mr-4" to="/profile">Profile</NuxtLink>
+            <NuxtLink class="mr-4" to="/favorites">Favorites: ({{favorites.length}})</NuxtLink>
             <button class="ml-4" @click="logOut">Logout</button>
         </div>
         <NuxtLink v-else to="/login">Login</NuxtLink>
@@ -19,6 +20,7 @@
 const cart = useCart();
 const auth = useAuth();
 const visitedPages = useVisitedPagesCount();
+const favorites = useFavorites();
 
 function logOut() {
     auth.value.isAuthorized = false;
