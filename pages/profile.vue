@@ -6,6 +6,11 @@
 <script lang="ts" setup>
 
 definePageMeta({
-    layout: "sidebar"
+    layout: "sidebar",
+     middleware: ['auth'],
+    // middleware: () => {
+    //     const auth = useAuth();
+    //     return auth.value.isAuthorized;
+    // }
 })
 </script>

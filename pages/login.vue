@@ -51,6 +51,8 @@ async function onSubmit() {
         _error.value = error.value.data.error;
         return;
     }
+    const auth = useAuth();
+    auth.value.isAuthorized = true;
     navigateTo("/");
 }
 
